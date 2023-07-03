@@ -67,6 +67,7 @@ template <size_t Size> class PolyMatrix {
         assert(this != &c && &b != &c);
 
         for (int i = 0; i < 4; i++) {
+            #pragma omp simd collapse(2)
             for (int j = 0; j < 4; j++) {
                 Polynomial res = 0;
                 for (int k = 0; k < 4; k++) {
