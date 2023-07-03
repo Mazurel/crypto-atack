@@ -15,7 +15,7 @@
 
 #include <omp.h>
 
-#define CONCAT_(A, B) A ## B
+#define CONCAT_(A, B) A##B
 #define CONCAT(A, B) CONCAT_(A, B)
 
 #ifndef CODE_ID
@@ -28,10 +28,10 @@ constexpr char possible_characters[] =
 
 void find_the_input(const std::string &output, const std::size_t len) {
     const uint64_t last_index = std::pow(sizeof(possible_characters), len);
-    const uint64_t log_step = last_index / 10000;
+    const uint64_t log_step = last_index / 100000;
     uint64_t iter_counter = 0;
     bool finished = false;
-    
+
     double last_time = omp_get_wtime();
 
     std::cout << std::endl;
@@ -98,6 +98,9 @@ int main() {
         0x46, 0xF6, 0x59, 0xB1, 0xDE, 0xDE, 0x98, 0x74,
         0xA6, 0x15, 0x55, 0xDF, 0xE9, 0xA8, 0xD6, 0x46,
     };
+    unsigned char output_len_7[] = {0xFE, 0x82, 0xB3, 0xC8, 0x24, 0x1B,
+                                    0x70, 0x38, 0x17, 0x7F, 0xEF, 0x0F,
+                                    0xE5, 0x18, 0xA4, 0x44};
 
     std::string output;
     output.reserve(16);

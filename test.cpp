@@ -106,8 +106,8 @@ UTEST(Check_engine_encryption, found_keys) {
         ASSERT_STREQ(got.c_str(), exp);
     }
     // Key for N = 6
-    if (false) {
-        auto got = Helpers::string_as_hex(e.encrypt(""));
+    {
+        auto got = Helpers::string_as_hex(e.encrypt("17u<8("));
         auto exp ="{ 46 F6 59 B1 DE DE 98 74 A6 15 55 DF E9 A8 D6 46 }";
         ASSERT_STREQ(got.c_str(), exp);
     }
