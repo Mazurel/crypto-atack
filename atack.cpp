@@ -10,8 +10,8 @@
 #include <string>
 #include <vector>
 
-#include "engine.hpp"
-#include "helpers.hpp"
+#include "include/engine.hpp"
+#include "include/helpers.hpp"
 
 #include <omp.h>
 
