@@ -55,11 +55,11 @@ template <size_t Size> class PolyMatrix {
         }
     }
 
-    const Polynomial &at(const size_t y, const size_t x) const {
+    inline const Polynomial &at(const size_t y, const size_t x) const {
         return this->data[y * Size + x];
     }
 
-    Polynomial &at(const size_t y, const size_t x) {
+    inline Polynomial &at(const size_t y, const size_t x) {
         return this->data[y * Size + x];
     }
 
