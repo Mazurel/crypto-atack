@@ -2,11 +2,13 @@ CC=clang++
 CXXFLAGS=-std=c++17 -O3 -fopenmp -fopenmp-simd -fconstexpr-steps=5000000
 
 .PHONY: test
+.SILENT: atack
 
 main: main.cpp include/*.hpp
 	$(CC) main.cpp $(CXXFLAGS) -o main
 
 atack: atack_2 atack_3 atack_3 atack_4 atack_5 atack_6 atack_7
+	echo "Atacks can be found in: atack/"
 
 atack_2: atack.cpp include/*.hpp
 	$(CC) atack.cpp $(CXXFLAGS) -DCODE_ID=2 -o atack/len_2
